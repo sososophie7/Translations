@@ -1,4 +1,3 @@
-
 LANG = "ENGLISH"
 
 
@@ -200,7 +199,8 @@ STRINGS = {
 				find = { name = "FIND", desc = "When you play this Card you may draw one additional Card from the first FOUR of your deck.\nTHis Card attempts to split the deck for ease (Right-click and Search the top pile)." },
 				drwL = { name = "HERALD", desc = "When you play this Card the next Legendary (purple) Card is drawn from your Deck." },
 				drwR = { name = "GUIDE", desc = "When you play this Card the next Rare (orange) Card is drawn from your Deck." },
-				drwR = { name = "STRATEGIST", desc = "When you play this Card the next Uncommon (grey) Card is drawn from your Deck." },
+				drwG = { name = "TACTICIAN", desc = "When you play this Card the next Uncommon (grey) Card is drawn from your Deck." },
+				strt = { name = "STRATEGIST", desc = "When you play this Card you may search your deck and create a pile of Four cards. Shuffle the Four cards, then place them on top of the Deck." },
 				merch = { name = "FREE ITEM", desc = "If you have fewer than THREE items, this Card will draw an additional Item when played." },
 				mrch2 = { name = "ITEM SHOP", desc = "If you have fewer than THREE items, this Card draws a selection of Items when played- the Player may pick ONE." },
 				lead = { name = "LEADER", desc = "When this Card is played, all Cards on the Player's backline attempt to move forward." },
