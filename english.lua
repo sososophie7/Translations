@@ -1,3 +1,4 @@
+
 LANG = "ENGLISH"
 
 
@@ -114,6 +115,8 @@ STRINGS = {
 				asst = { name = "ASSISTANT", desc = "'Setup' Cards Orthogonally Adjacent to this Card progress one State at the end of the Player's Turn." },
 				vntg = { name = "VANTAGE", desc = "This Card gains Attack Damage equal to the Attack or Value of the card behind it, whichever is lower." },
 				nomn = { name = "NOMAN'S", desc = "Cards that Target this Card instead target the space behind it." },
+				leap = { name = "BLOCKING", desc = "This Card intercepts Direct attacks and attacks that are aimed at the space behind it." },
+				brks = { name = "TRAINING", desc = "While this Card is on your frontline, consider any Heart costs to be one lower. " },
 
 				psnt = { name = "PASSING STRIKE", desc = "This Card targets one space diagonally opposite it, but only attacks if a Card is present. \nThe player may change the Target Direction at any time on their turn." },
 				diag = { name = "SIDE STRIKE", desc = "This Card targets one space diagonally opposite it. \nThe player may change the Direction at any time on their turn." },
@@ -146,6 +149,7 @@ STRINGS = {
 				swim = { name = "HIDDEN", desc = "This card Flips itself at the end of the Player's Turn and un-Flips at the start of the Player's Turn. Flipped Cards cannot be targeted." },
 				inq = { name = "UNEXPECTED", desc = "When a Card on your side of the Field dies in combat with this Card in your hand, this Card will replace it." },
 				agle = { name = "AGILE", desc = "This Card attemptes to move orthagonally at the end of the Player's turn. \nThe player may change the Direction at any time on their turn." },
+				esct = { name = "ESCORT", desc = "This Card Burns when the Player rings the Bell. If a Card is behind it, that Card moves into this Cards space." },
 
 				hive = { name = "DEFENDERS", desc = "Whenever this Card takes damage, one <1> is added to your Hand." },
 				draw = { name = "COMPANION", desc = "When this Card is played, one <1> is added to your Hand." },
@@ -162,6 +166,7 @@ STRINGS = {
 				mimc = { name = "MIMIC", desc = "Before Attacking, this card replaces itself with a copy of the card Opposite. This Copy does not stay in the Player's Deck." },
 				flip = { name = "FLIP", desc = "This Card's Attack flips the Victim rather than damaging it.  Flipped Cards cannot be targeted." },
 				dsplc = { name = "FEARSOME", desc = "When this Card attacks, the Target will attempt to move to an orthagonally out of the way (away from the bell if possible)" },
+				rout = { name = "ROUT", desc = "When this card destroys another, the cards adjacent to the Victim attempt to move to the backline." },
 
 				mule = { name = "CARGO", desc = "This Card adds a Supplies Card to a random players hand for each point of damage it takes." },
 				spike = { name = "RIPOSTE", desc = "This Card deals 1 Damage to any Card that directly attacks it." },
@@ -176,15 +181,15 @@ STRINGS = {
 				dfndr = { name = "COVER", desc = "Whenever a tile on the same row as this Card would be hit, this Card absorbs the first point of damage." },
 				bdygrd = { name = "BODYGUARD", desc = "When an orthogonally adjacent Card of greater Value than this Card is attacked, this Card attempts to swap places with it." },
 				ntrcpt = { name = "INTERCEPT", desc = "Whenever an empty space on this Card's row is attacked, this Card moves to block it." },
+				dive = { name = "HEAD-OFF", desc = "If an empty space is attacked while this Card is in the Player's Hand, this Card plays itself to block that space." },
 				invuln = { name = "INVULNERABLE", desc = "This Card cannot be targeted." },
 				immortal = { name = "ESCAPE", desc = "This Card returns to the player's hand when it would otherwise be killed in battle." },
 				revolting = { name = "REVOLT", desc = "If this Card is Sacked while the player is less than 5 damage from a Loss, it defects to the Opponent's Hand instead of burning." },
-				esct = { name = "ESCORT", desc = "This Card Burns when the Player rings the Bell. If a Card is behind it, that card moves into this Cards space." },
 
-				leap = { name = "BLOCKING", desc = "This Card intercepts Direct attacks and attacks that are aimed at the space behind it." },
-				brks = { name = "TRAINING", desc = "While this Card is on your frontline, consider any Heart costs to be one lower. " },
 				grow = { name = "SETUP", desc = "This Card changes state after one Round of the Frontline. You may view later States by right-clicking." },
-				grow = { name = "REVEAL", desc = "When this card would be Destroyed in combat, it instead sheds any damage and progresses one State. You may view later States by right-clicking." },
+				rvel = { name = "REVEAL", desc = "When this card would be Destroyed in combat, it instead sheds any damage and progresses one State. You may view later States by right-clicking." },
+				chce = { name = "TACTICAL", desc = "While this Card is in your Hand you may freely change its State." },
+				adpt = { name = "ADAPTIVE", desc = "The Player may change this Card's State at any time during their turn." },
 
 				find = { name = "FIND", desc = "When you play this Card you may draw one additional Card from the first FOUR of your deck.\nTHis Card attempts to split the deck for ease (Right-click and Search the top pile)." },
 				drwL = { name = "HERALD", desc = "When you play this Card the next Legendary (purple) Card is drawn from your Deck." },
