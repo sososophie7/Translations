@@ -1,5 +1,4 @@
 
-
 LANG = "ENGLISH"
 
 
@@ -117,7 +116,7 @@ STRINGS = {
 				nomn = { name = "NOMAN'S", desc = "cards that Target this card instead target the space behind it." },
 				leap = { name = "BLOCKING", desc = "This card intercepts Direct attacks and attacks that are aimed at the space behind it." },
 				brks = { name = "TRAINING", desc = "While this card is on your frontline, consider any Heart costs to be one lower. " },
-				brks = { name = "FUNDING", desc = "While this card is on the field, the Player gains 1 Diamond per turn" },
+				fndn = { name = "FUNDING", desc = "While this card is on the field, the Player gains 1 Diamond per turn" },
 
 				psnt = { name = "PASSING STRIKE", desc = "This card targets one space diagonally opposite it, but only attacks if a card is present. \nThe player may change the Target Direction at any time on their turn." },
 				diag = { name = "SIDE STRIKE", desc = "This card targets one space diagonally opposite it. \nThe player may change the Direction at any time on their turn." },
@@ -226,7 +225,21 @@ STRINGS = {
 				cptr = { name = "CAPTURE", desc = "When this card destroys another in battle, a copy of the Victim is added to the Player's Deck" }, --- this is for a Leshy Reference, 'Capture' is a play on catch and photograph
 			},
 			ITEMS = {
-
+				{ name = "FUNDING", 			desc = "Gain Four Diamonds" },
+				{ name = "TRAINING",			desc = "Gain Two Hearts" },
+				{ name = "CATAPHRACT",		desc = "Draw a Cataphract (0/5, Cups, BLOCKING)" },
+				{ name = "KELPIE",				desc = "Draw a KELPIE (Free, Drags a card into your deck on attack)"}, --barraks
+				{ name = "KNIGHT ERRANT",	desc = "Draw a modified KNIGHT with a cost of 4 diamonds"}, --mercenary
+				{ name = "AMBUSH",				desc = "Draw a rigged SUPPLIES card: summons one HIGHWAY MAN (4/2, PULL BACK) when destroyed in combat"}, --KNAVE > KNIGHT
+				{ name = "DEATH",					desc = "Draw DEATH (Cups, removes opposing card on attack)"}, -- sell sword
+				{ name = "INQUISITION",		desc = "Draw THE INQUISITION (1/3, SIDE STRIKE, Plays from hand to replace the next card killed)"}, --trader
+				{ name = "BALANCE", 			desc = "Deal one damage to the opposing player" }, --swashbuckler
+				{ name = "PAWN",					desc = "Draw one PAWN" }, --trebuchet packed > open
+				{ name = "TRAP",					desc = "Draw one BEAR TRAP (0/1 Cup Card: Riposte x2)"}, --lancer?stealthy?
+				{ name = "UPGRADE",				desc = "Draw a Token that may be placed on a card to give it +1 attack and +2 health"},  --shield bearer
+				{ name = "TRADER",				desc = "Draw one TRADER"}, --archer
+				{ name = "BUGLE",					desc = "Move forward all cards on your backline"}, --light infantry
+				{ name = "MIDAS",					desc = "Sack an enemy card and replace it with a Supply Hoard"},
 			},
 	},
 
