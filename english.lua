@@ -12,7 +12,7 @@ STRINGS = {
 			GUI = {
 				SPADE = { name = "SPADE", desc = "Use this to Sack a Card.\n\nIf used during Battle, the Card will drop resources."},
 				BASEATTACK = { name = "", desc = "Attack <1>"},
-				BASEHEALTH = { name = "", desc = "Health <2>"},
+				BASEHEALTH = { name = "", desc = "Health <1>"},
 				STACKABLE = { desc, "Supply Cards may be placed on top of each other to combine them into a higher Value version."},
 			},
 			SUITS = {
@@ -27,7 +27,7 @@ STRINGS = {
 				once = { name = "", desc = "If this Card is Destroyed in Battle it is removed from the Player's Deck." },
 				clear = { name = "", desc = "This Card does not stay in the Player's Deck between Phases." },
 				diDrop = {name = "", desc = "This Card drops <1> Diamonds when destroyed in Battle."},
-				clearCost = {name = "", desc = "This Card requires <1> <2> to be Sacked."},
+				clearCost = {name = "", desc = "This Card requires <1> <2> to be Sacked."}, -- num, currency
 				stat = {name = "", desc = "This Card does not move."},
 			},
 			CARDS = {
@@ -105,7 +105,6 @@ STRINGS = {
 					DamageToken = { name = "Damage Token", desc = "" },
 			},
 			SIGILS = {
-				awol = {name = "AWOL", desc = "This Card is burned after it attacks."},
 
 				ant = { name = "PHALANX", desc = "This Card boosts other Phalanx Cards on its row." },
 				antA = { name = "", desc = "This Card has +1 health per Phalanx Card on its row." },
@@ -117,6 +116,7 @@ STRINGS = {
 				nomn = { name = "NOMAN'S", desc = "Cards that Target this Card instead target the space behind it." },
 				leap = { name = "BLOCKING", desc = "This Card intercepts Direct attacks and attacks that are aimed at the space behind it." },
 				brks = { name = "TRAINING", desc = "While this Card is on your frontline, consider any Heart costs to be one lower. " },
+				brks = { name = "FUNDING", desc = "While this Card is on the field, the Player gains 1 Diamond per turn" },
 
 				psnt = { name = "PASSING STRIKE", desc = "This Card targets one space diagonally opposite it, but only attacks if a Card is present. \nThe player may change the Target Direction at any time on their turn." },
 				diag = { name = "SIDE STRIKE", desc = "This Card targets one space diagonally opposite it. \nThe player may change the Direction at any time on their turn." },
@@ -132,16 +132,15 @@ STRINGS = {
 				poke = { name = "OPENING STRIKE", desc = "This Card attacks for <1> Damage on the first turn it spends on the backline." },
 				ridr = { name = "RIDING STRIKE", desc = "This Card targets the Backline if there is no Card on the Frontline." },
 				lepr = { name = "LEAPING STRIKE", desc = "This Card gains +<1> Attack if the space behind the Target is empty." },
-				pirc = { name = "PIERCING STRIKE", desc = "If the Target's health is lower than this Card's Attack, the remaining health is dealt to any Card behind it." },
-				crsh = { name = "CRUSHING STRIKE", desc = "This Card deals double damage to Cards." },
-				bldg = { name = "BLUDGEONING STRIKE", desc = "This Card only damages Cards, not the opposing Player's health." },
-				envp = { name = "ENVELOPING STRIKE", desc = "This Card targets both the Frontline AND Backline." },
+				envp = { name = "ENVELOPING STRIKE", desc = "This Card targets both the Frontline AND Backline." },  -- Mjollnir!!
 				bmrng = { name = "RETURNING STRIKE", desc = "If there is a Card on the Backline this Card Targets it, otherwise it Targets the Frontline." },
 				chin = { name = "CHAIN STRIKE", desc = "This Card targets the space opposite, and any orthagonally adjacent Cards." },
 				drct = { name = "DIRECT STRIKE", desc = "This Card does not target spaces, but deals damage directly to the enemy Player." },
 				trgt = { name = "TARGETED STRIKE", desc = "This Card may target any one space on the opposing side. \nThe player may change the Target at any time on their turn." },
 				trgt = { name = "REACTIVE STRIKE", desc = "This Card only attacks in response to being directly attacked; targeting the attacker." },
 
+				awol = {name = "AWOL", desc = "This Card is burned after it attacks."},
+				ntre = {name = "TRANSIENT", desc = "This Card is burned after it attacks."},
 				push = { name = "PUSH", desc = "This Card attempts to move to the Frontline as soon as the bell is rung." },
 				fill = { name = "FILL", desc = "This Card attempts to move forward at the beginning of the enemy turn." },
 				bkstp = { name = "BACK-STEP", desc = "This Card attempts to move backward after attacking." },
@@ -150,23 +149,29 @@ STRINGS = {
 				inq = { name = "UNEXPECTED", desc = "When a Card on your side of the Field dies in combat with this Card in your hand, this Card will replace it." },
 				agle = { name = "AGILE", desc = "This Card attemptes to move orthagonally at the end of the Player's turn. \nThe player may change the Direction at any time on their turn." },
 				esct = { name = "ESCORT", desc = "This Card Burns when the Player rings the Bell. If a Card is behind it, that Card moves into this Cards space." },
+				chrg = { name = "CHARGE", desc = "This Card and any adjacent to it attempt to move to the frontline at the Start of the Enemy turn. This effect happens once after being played." },
+				glry = { name = "FOR GLORY", desc = "If the space in front of this card is attacked, this card attempts to move to defend it." },
 
 				hive = { name = "DEFENDERS", desc = "Whenever this Card takes damage, one <1> is added to your Hand." },
 				draw = { name = "COMPANION", desc = "When this Card is played, one <1> is added to your Hand." },
 				tail = { name = "EVADE", desc = "The first time this Card would take damage, it attempts to move orthagonally out of the way (away from the bell if possible).\nThis Card drops a <1> in its place after Evading." },
 				bait = { name = "BAIT", desc = "When destroyed in combat, one <1> will spawn in its place." },
-				load = { name = "TRANSPORT", desc = "Each turn this Card is on the Frontline, the Player draws <1> <2>" },  -- num, card
-				ammo = { name = "", desc = "Instead of attacking, this Card attempts to spawn one <1> on its targeted space." },
+				load = { name = "LOADED", desc = "Each turn this Card is on the Frontline, the Player draws one <1>" },
+				tnpt = { name = "TRANSPORT", desc = "This Card attempts to move backward when the Player's Attack begins; it leaves one <1> in its place after moving." },
+				ammo = { name = "", desc = "Instead of attacking, this Card attempts to spawn one <1> on its targeted space." }, -- unnamed? I want this for launching and planting bombs.
 				bild = { name = "BUILDER", desc = "When played, this Card attempts to place one <1> on the Frontline ahead of itself." },
 
 				death = { name = "DEATH", desc = "This Card's Attack sends the Victim to the Burn Pile, bypassing all effects." },
 				lthl = { name = "LETHAL", desc = "This Card's Attack always kills the Victim." },
 				pisn = { name = "POISON", desc = "This Card's Attack deals Poison damage; Poisioned Cards take additional damage each time the bell rings. \nThis card does not deal Damage to the Enemy Player." },
-				drag = { name = "DRAG", desc = "Instead of Attacking, this Card pulls the opposite Card into its space, adding it to the Player's deck, then de-spawns." },
-				mimc = { name = "MIMIC", desc = "Before Attacking, this card replaces itself with a copy of the card Opposite. This Copy does not stay in the Player's Deck." },
-				flip = { name = "FLIP", desc = "This Card's Attack flips the Victim rather than damaging it.  Flipped Cards cannot be targeted." },
+				bldg = { name = "BLUDGEONING", desc = "This Card only damages Cards, not the opposing Player's health." },
+				pirc = { name = "PIERCING", desc = "If the Target's health is lower than this Card's Attack, the remaining health is dealt to any Card behind it." },
+				crsh = { name = "CRUSHING", desc = "This Card deals double damage to Cards." },
+				flip = { name = "DISARMING", desc = "This Card's Attack flips the Victim rather than damaging it.  Flipped Cards cannot be targeted." },
 				dsplc = { name = "FEARSOME", desc = "When this Card attacks, the Target will attempt to move to an orthagonally out of the way (away from the bell if possible)" },
 				rout = { name = "ROUT", desc = "When this card destroys another, the cards adjacent to the Victim attempt to move to the backline." },
+				drag = { name = "DRAG", desc = "Instead of Attacking, this Card pulls the opposite Card into its space, adding it to the Player's deck." },  --- wololo
+				mimc = { name = "MIMIC", desc = "Before Attacking, this card replaces itself with a copy of the card Opposite. This Copy does not stay in the Player's Deck." },
 
 				mule = { name = "CARGO", desc = "This Card adds a Supplies Card to a random players hand for each point of damage it takes." },
 				spike = { name = "RIPOSTE", desc = "This Card deals 1 Damage to any Card that directly attacks it." },
@@ -177,6 +182,7 @@ STRINGS = {
 				fuse = { name = "FUSE", desc = "This Card is destroyed after <1> Bell Rings." },
 
 				bsrk = { name = "RAGE", desc = "This Card deals +1 Damage for each point of damage it has sustained." },
+				blck = { name = "BLOCK", desc = "This Card takes <1> less damage per Attack." },
 				stink = { name = "HAMPER", desc = "This Card reduces the opposing Card's Attack by 1 Damage." },
 				dfndr = { name = "COVER", desc = "Whenever a tile on the same row as this Card would be hit, this Card absorbs the first point of damage." },
 				bdygrd = { name = "BODYGUARD", desc = "When an orthogonally adjacent Card of greater Value than this Card is attacked, this Card attempts to swap places with it." },
@@ -197,7 +203,7 @@ STRINGS = {
 				drwR = { name = "STRATEGIST", desc = "When you play this Card the next Uncommon (grey) Card is drawn from your Deck." },
 				merch = { name = "FREE ITEM", desc = "If you have fewer than THREE items, this Card will draw an additional Item when played." },
 				mrch2 = { name = "ITEM SHOP", desc = "If you have fewer than THREE items, this Card draws a selection of Items when played- the Player may pick ONE." },
-				chrg = { name = "LEADER", desc = "When this Card is played, all Cards on the Player's backline attempt to move forward." },
+				lead = { name = "LEADER", desc = "When this Card is played, all Cards on the Player's backline attempt to move forward." },
 				reset = { name = "RESET", desc = "When this Card is played, all Cards in the Player's Hand are burned and <1> Cards are drawn from their Deck." },
 				clear = { name = "FRESH SLATE", desc = "When this Card is played, all Cards on the Field are Burned." },
 
@@ -208,7 +214,7 @@ STRINGS = {
 				grdge = { name = "", desc = "When this Card is killed, it changes State to match its Attack with the Damage dealt. This Card keeps this Attack change even between battles." },
 				heel = { name = "", desc = "This Card withstands all attacks that are not 1 Damage Air Strikes" },
 
-				addD = { name = "COMPANY", desc = "When using Reset Deck, this Card adds <1> <2> to the Player's Deck." },
+				addD = { name = "COMPANY", desc = "When using Reset Deck, this Card adds <1> <2> to the Player's Deck." }, -- num, card
 				port = { name = "PORTENT", desc = "On Drawing this Card, one <1> is added to the top of the Player's Deck." }, --- could also be Omen
 				cptr = { name = "CAPTURE", desc = "When this Card destroys another in battle, a copy of the Victim is added to the Player's Deck" }, --- this is for a Leshy Reference, 'Capture' is a play on catch and photograph
 			},
