@@ -134,7 +134,7 @@ STRINGS = {
 				ridr = { name = "RIDING STRIKE", desc = "This card targets the Backline if there is no card on the Frontline." },
 				lepr = { name = "LEAPING STRIKE", desc = "This card gains +<1> Attack if the space behind the Target is empty." },
 				dbls = { name = "DOUBLE STRIKE", desc = "This card attacks twice." },
-				envp = { name = "ENVELOPING STRIKE", desc = "This card targets both the Frontline AND Backline." }, 
+				envp = { name = "ENVELOPING STRIKE", desc = "This card targets both the Frontline AND Backline." },
 				bmrng = { name = "RETURNING STRIKE", desc = "If there is a card on the Backline this card Targets it, otherwise it Targets the Frontline." }, -- Mjollnir!!
 				chin = { name = "CHAIN STRIKE", desc = "This card targets the space opposite, and any orthagonally adjacent cards." },
 				drct = { name = "DIRECT STRIKE", desc = "This card does not target spaces, but deals damage directly to the enemy Player." },
@@ -165,7 +165,8 @@ STRINGS = {
 
 				death = { name = "DEATH", desc = "This card's Attack sends the Victim to the Burn Pile, bypassing all effects." },
 				lthl = { name = "LETHAL", desc = "This card's Attack always kills the Victim." },
-				pisn = { name = "POISON", desc = "This card's Attack deals Poison damage; Poisioned cards take additional damage each time the bell rings. \nThis card does not deal Damage to the Enemy Player." },
+				pisn = { name = "POISON", desc = "This card's Attack deals Poison damage; Poisioned cards take additional damage at the end of the owner's turn. \nThis card does not deal Damage to the Enemy Player." },
+				burn = { name = "FIRE", desc = "This card's Attack ignites the Target; Ignited cards take additional damage each time the bell rings. \nThis card does not deal Damage to the Enemy Player." },
 				bldg = { name = "BLUDGEONING", desc = "This card only damages cards, not the opposing Player's health." },
 				pirc = { name = "PIERCING", desc = "If the Target's health is lower than this card's Attack, the remaining health is dealt to any card behind it." },
 				crsh = { name = "CRUSHING", desc = "This card deals double damage to cards." },
@@ -174,7 +175,8 @@ STRINGS = {
 				rout = { name = "ROUT", desc = "When this card destroys another, the cards adjacent to the Victim attempt to move to the backline." },
 				drag = { name = "DRAG", desc = "Instead of Attacking, this card pulls the opposite card into its space, adding it to the Player's deck." },  --- wololo
 				mimc = { name = "MIMIC", desc = "Before Attacking, this card replaces itself with a copy of the card Opposite. This Copy does not stay in the Player's Deck." },
-				shpF = { name = "SHAPESHIFTER", desc = "On playing this card, you may search your deck for one card of equal value. Show the drawn card and bring it into your hand, then discard this card." },
+				ptrf = { name = "PETRIFYING", desc = "Instead of dealing damage, this card replaces its Target with a <1>" },
+				trmg = { name = "TRANSMOGRIFYING", desc = "Instead of dealing damage, this card replaces its Target with the next card from the Victim's Owner's Deck." },
 
 				mule = { name = "CARGO", desc = "This card adds a Supplies card to a random players hand for each point of damage it takes." },
 				spike = { name = "RIPOSTE", desc = "This card deals 1 Damage to any card that directly attacks it." },
@@ -187,7 +189,7 @@ STRINGS = {
 				bsrk = { name = "RAGE", desc = "This card deals +1 Damage for each point of damage it has sustained." },
 				blck = { name = "BLOCK", desc = "This card takes <1> less damage per Attack." },
 				stink = { name = "HAMPER", desc = "This card reduces the opposing card's Attack by 1 Damage." },
-				dfndr = { name = "COVER", desc = "Whenever a tile on the same row as this card would be hit, this card absorbs the first point of damage." },
+				dfndr = { name = "COVER", desc = "Whenever a tile on the same row as this card would be hit, this card absorbs the first point of damage. Effects such as Lethal only apply if this card is the one targeted." },
 				bdygrd = { name = "BODYGUARD", desc = "When an orthogonally adjacent card of greater Value than this card is attacked, this card attempts to swap places with it." },
 				ntrcpt = { name = "INTERCEPT", desc = "Whenever an empty space on this card's row is attacked, this card moves to block it." },
 				dive = { name = "HEAD-OFF", desc = "If an empty space is attacked while this card is in the Player's Hand, this card plays itself to block that space." },
@@ -210,6 +212,7 @@ STRINGS = {
 				lead = { name = "LEADER", desc = "When this card is played, all cards on the Player's backline attempt to move forward." },
 				reset = { name = "RESET", desc = "When this card is played, all cards in the Player's Hand are burned and <1> cards are drawn from their Deck." },
 				clear = { name = "FRESH SLATE", desc = "When this card is played, all cards on the Field are Burned." },
+				shpF = { name = "SHAPESHIFTER", desc = "On playing this card, you may search your deck for one card of equal value. Show the drawn card and bring it into your hand, then discard this card." },
 
 				hand = { name = "", desc = "This card's Attack is equal to the number of cards in the Player's Hand." },
 				bell = { name = "", desc = "This card gains +1 Attack the further it is from the Bell, and gains +1 Health the closer it is to the bell (min 1, max 4)." },
