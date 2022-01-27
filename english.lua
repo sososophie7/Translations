@@ -239,27 +239,12 @@ STRINGS = {
 				UPGRADE=	{ name = "UPGRADE",				desc = "Draw a Token that may be placed on a card to give it +1 attack and +2 health"},  --shield bearer
 				TRADER=	{ name = "TRADER",				desc = "Draw one TRADER"}, --archer
 				BUGLE=	{ name = "BUGLE",					desc = "Move forward all cards on your backline"}, --light infantry
-				MIDAS=	{ name = "MIDAS",					desc = "Sack an enemy card and replace it with a Supply Hoard"},
+				MIDAS =	{ name = "MIDAS",					desc = "Sack an enemy card and replace it with a Supply Hoard"},
+				DRAWR =	{ name = "DRAW",					desc = "Draw a Card from the Draw Pile into your Hand. The Card is added to your Deck."},
+				FIND=	{ name = "SCOUT",					desc = "Splits the first Four Cards from your Deck. You may Search them and Draw One."},
+				RESET=	{ name = "RESET",					desc = "Flushes the cards from your hand back into your deck and draws Four."},
+				RAND=	{ name = "RAND",					desc = "Draw a random Item Card."},
 			},
 	},
 
 }
-
-
-function getString(params)
-	local check = params["check"]
-	local group = params[1]
-	local id = params[2]
-	local ele = params[3]
-	if STRINGS[LANG][1][2][3] then
-		return STRINGS[LANG][1][2][3]
-	elseif STRINGS[ENGLISH][1][2][3] then
-		return STRINGS[ENGLISH][1][2][3]
-	else
-		if check then
-			return false
-		else
-			return ""
-		end
-	end
-end
