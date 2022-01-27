@@ -1,4 +1,3 @@
-
 LANG = "ENGLISH"
 
 
@@ -225,21 +224,22 @@ STRINGS = {
 				cptr = { name = "CAPTURE", desc = "When this card destroys another in battle, a copy of the Victim is added to the Player's Deck" }, --- this is for a Leshy Reference, 'Capture' is a play on catch and photograph
 			},
 			ITEMS = {
-				{ name = "FUNDING", 			desc = "Gain Four Diamonds" },
-				{ name = "TRAINING",			desc = "Gain Two Hearts" },
-				{ name = "CATAPHRACT",		desc = "Draw a Cataphract (0/5, Cups, BLOCKING)" },
-				{ name = "KELPIE",				desc = "Draw a KELPIE (Free, Drags a card into your deck on attack)"}, --barraks
-				{ name = "KNIGHT ERRANT",	desc = "Draw a modified KNIGHT with a cost of 4 diamonds"}, --mercenary
-				{ name = "AMBUSH",				desc = "Draw a rigged SUPPLIES card: summons one HIGHWAY MAN (4/2, PULL BACK) when destroyed in combat"}, --KNAVE > KNIGHT
-				{ name = "DEATH",					desc = "Draw DEATH (Cups, removes opposing card on attack)"}, -- sell sword
-				{ name = "INQUISITION",		desc = "Draw THE INQUISITION (1/3, SIDE STRIKE, Plays from hand to replace the next card killed)"}, --trader
-				{ name = "BALANCE", 			desc = "Deal one damage to the opposing player" }, --swashbuckler
-				{ name = "PAWN",					desc = "Draw one PAWN" }, --trebuchet packed > open
-				{ name = "TRAP",					desc = "Draw one BEAR TRAP (0/1 Cup Card: Riposte x2)"}, --lancer?stealthy?
-				{ name = "UPGRADE",				desc = "Draw a Token that may be placed on a card to give it +1 attack and +2 health"},  --shield bearer
-				{ name = "TRADER",				desc = "Draw one TRADER"}, --archer
-				{ name = "BUGLE",					desc = "Move forward all cards on your backline"}, --light infantry
-				{ name = "MIDAS",					desc = "Sack an enemy card and replace it with a Supply Hoard"},
+				FUNDING=	{ name = "FUNDING", 			desc = "Gain Four Diamonds" },
+				TRAINING =	{ name = "TRAINING",			desc = "Gain Two Hearts" },
+				CATPH =	{ name = "CATAPHRACT",		desc = "Draw a Cataphract (0/5, Cups, BLOCKING)" },
+				KELPIE=	{ name = "KELPIE",				desc = "Draw a KELPIE (Free, Drags a card into your deck on attack)"}, --barraks
+				KNIGHTE=	{ name = "KNIGHT ERRANT",	desc = "Draw a modified KNIGHT with a cost of 4 diamonds"}, --mercenary
+				AMBUSH=	{ name = "AMBUSH",				desc = "Draw a rigged SUPPLIES card: summons one HIGHWAY MAN (4/2, PULL BACK) when destroyed in combat"}, --KNAVE > KNIGHT
+				DEATH=	{ name = "DEATH",					desc = "Draw DEATH (Cups, removes opposing card on attack)"}, -- sell sword
+				INQ=	{ name = "INQUISITION",		desc = "Draw THE INQUISITION (1/3, SIDE STRIKE, Plays from hand to replace the next card killed)"}, --trader
+				BALANCE=	{ name = "BALANCE", 			desc = "Deal one damage to the opposing player" }, --swashbuckler
+				TIP=	{ name = "TIP", 			desc = "Deal three damage to the opposing player" }, --swashbuckler
+				PAWN=	{ name = "PAWN",					desc = "Draw one PAWN" }, --trebuchet packed > open
+				TRAP=	{ name = "TRAP",					desc = "Draw one BEAR TRAP (0/1 Cup Card: Riposte x2)"}, --lancer?stealthy?
+				UPGRADE=	{ name = "UPGRADE",				desc = "Draw a Token that may be placed on a card to give it +1 attack and +2 health"},  --shield bearer
+				TRADER=	{ name = "TRADER",				desc = "Draw one TRADER"}, --archer
+				BUGLE=	{ name = "BUGLE",					desc = "Move forward all cards on your backline"}, --light infantry
+				MIDAS=	{ name = "MIDAS",					desc = "Sack an enemy card and replace it with a Supply Hoard"},
 			},
 	},
 
