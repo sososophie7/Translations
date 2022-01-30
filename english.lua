@@ -29,14 +29,14 @@ STRINGS = {
 				clearCost = {name = "", desc = "This card requires <1> <2> to be Sacked."}, -- num, currency
 				stat = {name = "", desc = "This card does not move."},
 			},
-			cardS = {
+			CARDS = {
 					PAWN = { name = "PAWN", desc = "" },
 					REVOLTINGPAWN = { name = "REVOLTING PAWN", desc = "" },
 					PSIOLOI = { name = "PSIOLOI", desc = "" },
 
 					SUPPLYHOARD = { name = "SUPPLY HOARD", desc = "" },
-					SUPPLYSTASH = { name = "SUPPLY STASH", desc = "" },
-					SUPPLIES = { name = "SUPPLIES", desc = "" },
+					SUPPLYSTASH = { name = "SUPPLY STASH", desc = "Supply Cards may be stacked on the Field to combine their Value, to a max of three." },
+					SUPPLIES = { name = "SUPPLIES", desc = "Supply Cards may be stacked on the Field to combine their Value, to a max of three." },
 					MERCHANT = { name = "MERCHANT", desc = "" },
 					SCOUT = { name = "SCOUT", desc = "" },
 					TRADER = { name = "TRADER", desc = "" },
@@ -73,6 +73,7 @@ STRINGS = {
 					OUTLAW = { name = "OUTLAW", desc = "" },
 					PRIVATEER = { name = "PRIVATEER", desc = "" },
 					RONIN = { name = "RONIN", desc = "" },
+					PRINCESS = { name = "PRINCESS", desc = "" },
 					ROOK = { name = "ROOK", desc = "" },
 					SACREDBAND = { name = "SACRED BAND", desc = "" },
 					BROADSWORDSMAN = { name = "BROAD SWORDSMAN", desc = "" },
@@ -80,7 +81,7 @@ STRINGS = {
 					TREBUCHET = { name = "TREBUCHET", desc = "" },
 					KNIGHTERRANT = { name = "KNIGHT ERRANT", desc = "" },
 
-					GILGAMESH = { name = "GILGAMESH", desc = "" },
+					GILGAMESH = { name = "GILGAMESH", desc = "Attack Damage: 1" },
 					THEALLFATHER = { name = "THE ALL FATHER", desc = "" },
 					THEGODOFBALANCE = { name = "THE GOD OF BALANCE", desc = "" },
 					THEGODOFHEALTHANDWAR = { name = "THE GOD OF HEALTH AND WAR", desc = "" },
@@ -106,8 +107,8 @@ STRINGS = {
 			SIGILS = {
 
 				ant = { name = "PHALANX", desc = "This card boosts other Phalanx cards on its row." },
-				antA = { name = "", desc = "This card has +1 health per Phalanx card on its row." },
-				antH = { name = "", desc = "This card has +1 attack per Phalanx card on its row." },
+				antA = { name = "PHALANX ATTACK", desc = "This card has +1 attack per Phalanx card on its row." },
+				antH = { name = "PHALANX DEFENSE", desc = "This card has +1 health per Phalanx card on its row." },
 
 				stndrd = { name = "STANDARD BEARER", desc = "cards Orthogonally Adjacent to this card gain +1 Attack." },
 				asst = { name = "ASSISTANT", desc = "'Setup' cards Orthogonally Adjacent to this card progress one State at the end of the Player's Turn." },
@@ -141,10 +142,10 @@ STRINGS = {
 
 				awol = {name = "AWOL", desc = "This card is burned after it attacks."},
 				ntre = {name = "TRANSIENT", desc = "This card is burned after it attacks."},
-				push = { name = "PUSH", desc = "This card attempts to move to the Frontline as soon as the bell is rung." },
-				fill = { name = "FILL", desc = "This card attempts to move forward at the beginning of the enemy turn." },
-				bkstp = { name = "BACK-STEP", desc = "This card attempts to move backward after attacking." },
-				skrm = { name = "SKIRMISHER", desc = "This card returns to the Player's Hand after attacking." },
+				push = { name = "PUSH", desc = "This card attempts to move forward at the beginning of the enemy turn." },
+				rush = { name = "RUSH", desc = "This card attempts to move to the Frontline as soon as the bell is rung." },
+				bkstp = { name = "BACK-STEP", desc = "This card attempts to move to the backline after attacking." },
+				skrm = { name = "SKIRMISHER", desc = "This card returns to the Player's Deck after being on the Frontline for one turn." },
 				swim = { name = "HIDDEN", desc = "This card Flips itself at the end of the Player's Turn and un-Flips at the start of the Player's Turn. Flipped cards cannot be targeted." },
 				inq = { name = "UNEXPECTED", desc = "When a card on your side of the Field dies in combat with this card in your hand, this card will replace it." },
 				agle = { name = "AGILE", desc = "This card attemptes to move orthagonally at the end of the Player's turn. \nThe player may change the Direction at any time on their turn." },
@@ -157,7 +158,7 @@ STRINGS = {
 				tail = { name = "EVADE", desc = "The first time this card would take damage, it attempts to move orthagonally out of the way (away from the bell if possible).\nThis card drops a <1> in its place after Evading." },
 				bait = { name = "BAIT", desc = "When destroyed in combat, one <1> will spawn in its place." },
 				load = { name = "LOADED", desc = "Each turn this card is on the Frontline, the Player draws one <1>" },
-				tnpt = { name = "TRANSPORT", desc = "This card attempts to move backward when the Player's Attack begins; it leaves one <1> in its place after moving." },
+				tnpt = { name = "TRANSPORT", desc = "This card attempts to move to the backline when the Player's Attack begins; it leaves one <1> in its place after moving." },
 				ammo = { name = "", desc = "Instead of attacking, this card attempts to spawn one <1> on its targeted space." }, -- unnamed? I want this for launching and planting bombs.
 				bild = { name = "BUILDER", desc = "When played, this card attempts to place one <1> on the Frontline ahead of itself." },
 
@@ -187,7 +188,7 @@ STRINGS = {
 				bsrk = { name = "RAGE", desc = "This card deals +1 Damage for each point of damage it has sustained." },
 				blck = { name = "BLOCK", desc = "This card takes <1> less damage per Attack." },
 				stink = { name = "HAMPER", desc = "This card reduces the opposing card's Attack by 1 Damage." },
-				dfndr = { name = "COVER", desc = "Whenever a tile on the same row as this card would be hit, this card absorbs the first point of damage. Effects such as Lethal only apply if this card is the one targeted." },
+				dfndr = { name = "COVER", desc = "Whenever a tile on the same row as this card would be hit, this card takes the first point of damage." },
 				bdygrd = { name = "BODYGUARD", desc = "When an orthogonally adjacent card of greater Value than this card is attacked, this card attempts to swap places with it." },
 				ntrcpt = { name = "INTERCEPT", desc = "Whenever an empty space on this card's row is attacked, this card moves to block it." },
 				dive = { name = "HEAD-OFF", desc = "If an empty space is attacked while this card is in the Player's Hand, this card plays itself to block that space." },
@@ -200,7 +201,7 @@ STRINGS = {
 				chce = { name = "TACTICAL", desc = "While this card is in your Hand you may freely change its State." },
 				adpt = { name = "ADAPTIVE", desc = "The Player may change this card's State at any time during their turn." },
 
-				find = { name = "FIND", desc = "When you play this card you may draw one additional card from the first FOUR of your deck.\nTHis card attempts to split the deck for ease (Right-click and Search the top pile)." },
+				find = { name = "FIND", desc = "When you play this card you may draw one additional card from the first FOUR of your deck.\nThis card attempts to split the deck for ease (Right-click and Search the top pile)." },
 				drwL = { name = "HERALD", desc = "When you play this card the next Legendary (purple) card is drawn from your Deck." },
 				drwR = { name = "GUIDE", desc = "When you play this card the next Rare (orange) card is drawn from your Deck." },
 				drwG = { name = "TACTICIAN", desc = "When you play this card the next Uncommon (grey) card is drawn from your Deck." },
@@ -208,13 +209,13 @@ STRINGS = {
 				merch = { name = "FREE ITEM", desc = "If you have fewer than THREE items, this card will draw an additional Item when played." },
 				mrch2 = { name = "ITEM SHOP", desc = "If you have fewer than THREE items, this card draws a selection of Items when played- the Player may pick ONE." },
 				lead = { name = "LEADER", desc = "When this card is played, all cards on the Player's backline attempt to move forward." },
-				reset = { name = "RESET", desc = "When this card is played, all cards in the Player's Hand are burned and <1> cards are drawn from their Deck." },
+				hndRst = { name = "RESET", desc = "When this card is played, all cards in the Player's Hand are burned and <1> cards are drawn from their Deck." },
 				clear = { name = "FRESH SLATE", desc = "When this card is played, all cards on the Field are Burned." },
 				shpF = { name = "SHAPESHIFTER", desc = "On playing this card, you may search your deck for one card of equal value. Show the drawn card and bring it into your hand, then discard this card." },
 
 				hand = { name = "", desc = "This card's Attack is equal to the number of cards in the Player's Hand." },
 				bell = { name = "", desc = "This card gains +1 Attack the further it is from the Bell, and gains +1 Health the closer it is to the bell (min 1, max 4)." },
-				scales = { name = "", desc = "This card gains +1 Attack per 2 damage the Player is from Winning (min 0), and +1 Health for each Loss the Player has had (min 2)." },
+				scales = { name = "", desc = "This card gains +1 Attack per 2 damage the Player is from Winning (min 0), and 2 Health +1 for each Loss the Player has had." },
 				phase = { name = "", desc = "This card's State cycles at the start of the player's turn." },
 				grdge = { name = "", desc = "When this card is killed, it changes State to match its Attack with the Damage dealt. This card keeps this Attack change even between battles." },
 				heel = { name = "", desc = "This card withstands all attacks that are not 1 Damage Air Strikes" },
@@ -228,12 +229,12 @@ STRINGS = {
 				TRAINING =	{ name = "TRAINING",			desc = "Gain Two Hearts" },
 				CATPH =	{ name = "CATAPHRACT",		desc = "Draw a Cataphract (0/5, Cups, BLOCKING)" },
 				KELPIE=	{ name = "KELPIE",				desc = "Draw a KELPIE (Free, Drags a card into your deck on attack)"}, --barraks
-				KNIGHTE=	{ name = "KNIGHT ERRANT",	desc = "Draw a modified KNIGHT with a cost of 4 diamonds"}, --mercenary
+				KNIGHTE=	{ name = "KNIGHT ERRANT",	desc = "Draw a modified KNIGHT with a cost of 3 diamonds"}, --mercenary
 				AMBUSH=	{ name = "AMBUSH",				desc = "Draw a rigged SUPPLIES card: summons one HIGHWAY MAN (4/2, PULL BACK) when destroyed in combat"}, --KNAVE > KNIGHT
 				DEATH=	{ name = "DEATH",					desc = "Draw DEATH (Cups, removes opposing card on attack)"}, -- sell sword
 				INQ=	{ name = "INQUISITION",		desc = "Draw THE INQUISITION (1/3, SIDE STRIKE, Plays from hand to replace the next card killed)"}, --trader
-				BALANCE=	{ name = "BALANCE", 			desc = "Deal one damage to the opposing player" }, --swashbuckler
-				TIP=	{ name = "TIP", 			desc = "Deal three damage to the opposing player" }, --swashbuckler
+				BALANCE=	{ name = "BALANCE", 			desc = "Moves the Health Tracker up to two spaces towards the middle." }, --swashbuckler
+				TIP=	{ name = "TIP", 			desc = "Deal two damage to the opposing player" }, --swashbuckler
 				PAWN=	{ name = "PAWN",					desc = "Draw one PAWN" }, --trebuchet packed > open
 				TRAP=	{ name = "TRAP",					desc = "Draw one BEAR TRAP (0/1 Cup Card: Riposte x2)"}, --lancer?stealthy?
 				UPGRADE=	{ name = "UPGRADE",				desc = "Draw a Token that may be placed on a card to give it +1 attack and +2 health"},  --shield bearer
@@ -244,6 +245,16 @@ STRINGS = {
 				FIND=	{ name = "SCOUT",					desc = "Splits the first Four Cards from your Deck. You may Search them and Draw One."},
 				RESET=	{ name = "RESET",					desc = "Flushes the cards from your hand back into your deck and draws Four."},
 				RAND=	{ name = "RAND",					desc = "Draw a random Item Card."},
+			},
+			TOKENS = {
+				PLSATTK = { name = "+1 Attack", desc = "Place on a card to grant it +1 Attack. \n\nWhen Flipped, becomes a +2 Health." },
+				PLSHLTH = { name = "+2 Health", desc = "Place on a card to grant it +2 Health. \n\nWhen Flipped, becomes a +1 Attack." },
+				DMG1 = { name = "Damage", desc = "Counts as -1 Health when placed on a card. If a card reaches 0 Health it is burned." },
+				BOW = { name = "Bow", desc = "Place on a card to grant it <1>. \n\nThis token is removed at the end of the card's attack." },
+				HRT = { name = "Heart", desc = "Gained by Sacking non-Cups cards. Unused Hearts vanish at the end of your turn." },
+				DIM = { name = "Diamond", desc = "Gained whenever a Card is burned on your side of the field. Unused Diamonds vanish at the end of Battle." },
+				Booster = { name = "Booster", desc = "" },
+				DamageToken = { name = "Damage Token", desc = "" },
 			},
 	},
 
